@@ -1,26 +1,27 @@
-@font-face {
-    font-family: 'Lato';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Lato Regular'), local('Lato-Regular'), url(Lato.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+body {
+    background: #A5DAD2;
+    display: absolute;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
-@font-face {
-    font-family: 'Quicksand';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Quicksand'), local('Quicksand'), url(Quicksand.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+.container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(106, 196, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 
 ::selection {
     background: transparent;
-}
-
-body {
-    background: #A5DAD2;
-    font-family: Quicksand, san-serif;
 }
 
 .bgWhite {
@@ -64,8 +65,8 @@ body {
 }
 
 .gameCell {
-    width: 181px;
-    height: 181px;
+    width: 25vh;
+    height: 25vh;
 }
 
 .gameCell:not(.marked):hover {
@@ -78,8 +79,19 @@ body {
 }
 
 .scoreBoard {
+    top: 0;
     color: #516D66;
     height: 100px;
+}
+
+.jugador1{
+    position: absolute;
+    left: 5%;
+}
+
+.jugador2{
+    position: absolute;
+    right: 5%;
 }
 
 .boardCol {
