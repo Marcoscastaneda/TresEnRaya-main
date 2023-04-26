@@ -1,5 +1,5 @@
 body {
-    background: #A5DAD2;
+    background: rgb(221, 252, 173);
     display: absolute;
     padding: 0;
     margin: 0;
@@ -7,13 +7,14 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
+
 }
 
 .container{
     position: absolute;
     width: 80%;
     height: 100%;
-    background-color: rgb(106, 196, 231);
+    background-color: rgb(221, 252, 173);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,4 +107,71 @@ body {
 
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
+}
+
+
+
+
+/*Pagina de inicio */
+
+.inicio{
+    background-color: rgb(221, 252, 173);
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center; 
+    transition: 0.7s;
+    opacity: 1;
+}
+
+.titulo_principal{
+    width: 50%;
+    position: absolute;
+    background-color: rgb(221, 252, 173); 
+    position: absolute;
+    top: -10%;
+}
+
+.boton_iniciar{
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    font-size: 2vw;
+    transform: translate(-50%, 0);
+    background: rgb(117,199,251);
+    background: linear-gradient(90deg, rgba(117,199,251,1) 0%, rgba(255,102,196,1) 50%, rgba(255,189,89,1) 100%);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: ease 0.5s;
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+    color: rgb(221, 252, 173);
+}
+
+.boton_iniciar:hover{
+    top: 57.5%;
+    width: 20%;
+    height: 20%;
+    font-size: 3vw;
+}
+
+.interior{
+    background-color: rgb(25, 130, 196);
+    height: 92%;
+    width: 95%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
 }
