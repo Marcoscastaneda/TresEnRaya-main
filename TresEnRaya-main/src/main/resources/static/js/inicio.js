@@ -20,11 +20,11 @@ var boton = document.getElementById("botonaudio");
 boton.addEventListener("click", function(){
    if (!sound) {
        v.play();
-       document.getElementById("imgsonido").setAttribute('src', 'img/sonido_off.png');
+       document.getElementById("imgsonido").setAttribute('src', 'img/sonido_on.png');
        sound = true;
    } else {
        v.pause();
-       document.getElementById("imgsonido").setAttribute('src', 'img/sonido_on.png');
+       document.getElementById("imgsonido").setAttribute('src', 'img/sonido_off.png');
        sound = false;
    }
 });
