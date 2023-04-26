@@ -37,10 +37,6 @@ body {
     background: #516D66;
 }
 
-.colorDark {
-    color: #516D66;
-}
-
 .bgRed {
     background: #F286A0;
 }
@@ -174,4 +170,33 @@ body {
     display: flex;
     justify-content: center;    
     align-items: center;
+}
+
+/* MUSICA */
+
+.botonaudio{
+    position: absolute;
+    left: 93%;
+    top: 5%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: whitesmoke;
+    background-image: url("./img/sonido_on");
+    padding: 5px;
+    box-shadow: inset 0px 0px 25px 0px;
+}
+
+/* PAGINA INICIO */
+.introduce_nombre {
+    color: #000000;
+    font-family: 'Barlow Condensed';
+    font-weight: bold;
+}
+
+.boton_play{
+    background-color: antiquewhite;
+    border: 2px solid black;
+    border-radius: 20px;
 }
