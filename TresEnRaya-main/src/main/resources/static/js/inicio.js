@@ -6,6 +6,7 @@ function prueba(){
     
     var inicio = document.getElementById("inicio")
 
-    inicio.style.display = "none"
+    inicio.style.opacity = "0"
+    setTimeout(function () {inicio.style.display = "none"}, 700);
 
 }
