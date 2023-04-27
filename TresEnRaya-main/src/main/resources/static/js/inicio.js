@@ -28,3 +28,17 @@ boton.addEventListener("click", function(){
        sound = false;
    }
 });
+
+/* TECLA ENTER PARA JUGAR */
+
+var input = document.getElementById("nickname");
+var boton = document.getElementById("startBtn");
+
+input.addEventListener("keyup", jugar)
+function jugar() {
+  if (event.key === 13) {
+    button.click();
+  }
+};
+
+
