@@ -145,12 +145,13 @@ startBtn.addEventListener('click', event => {
 });
 
 
+
 window.addEventListener("keydown", (event) => {
 
 	var tecla = event.key
   
 	if(tecla == 13){
-	  alert("gfs")
+	  alert("hola")
 	}
   
 })
