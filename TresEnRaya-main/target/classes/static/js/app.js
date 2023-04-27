@@ -144,6 +144,19 @@ startBtn.addEventListener('click', event => {
     }
 });
 
+
+window.addEventListener("keydown", (event) => {
+
+	var tecla = event.key
+  
+	if(tecla == 13){
+	  alert("gfs")
+	}
+  
+})
+
+
+
 function startGame() {
 	
 	joinForm.style.display = "none";
