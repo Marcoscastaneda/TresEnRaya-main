@@ -36,9 +36,15 @@ var boton = document.getElementById("startBtn");
 
 input.addEventListener("keyup", jugar)
 function jugar() {
-  if (event.key === 13) {
+  if (keyCode === 13) {
     button.click();
   }
 };
+
+
+
+
+
+
 
 
