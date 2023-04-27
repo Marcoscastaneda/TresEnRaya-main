@@ -29,19 +29,6 @@ boton.addEventListener("click", function(){
    }
 });
 
-/* TECLA ENTER PARA JUGAR */
-
-var input = document.getElementById("nickname");
-var boton = document.getElementById("startBtn");
-
-input.addEventListener("keyup", jugar)
-function jugar() {
-  if (keyCode === 13) {
-    button.click();
-  }
-};
-
-
 
 
 
