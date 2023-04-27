@@ -1,3 +1,4 @@
+
 var boton_iniciar = document.getElementById("boton_iniciar");
 
 boton_iniciar.addEventListener("click", prueba)
@@ -28,3 +29,10 @@ boton.addEventListener("click", function(){
        sound = false;
    }
 });
+
+
+
+
+
+
+

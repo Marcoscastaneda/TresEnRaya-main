@@ -14,7 +14,7 @@
 <body>
 
 	<div class="inicio" id="inicio">
-		<img src="img/TicTacToe_png.png" class="titulo_principal">
+		<img draggable="false" src="img/TicTacToe_png.png" class="titulo_principal">
 		<div class="boton_iniciar" id="boton_iniciar">
 				<div class="interior"><p>LET'S PLAY!!</p></div>
 		</div>
@@ -38,34 +38,26 @@
 
 				<div class="general">
 
-					<h1 class="introduce_nombre">Enter your name</h1>
-
-
-					<div class="panel panel-danger">
-
-						<div class="panel-body">
-
-							<div class="input-group">
-
-								<input class="texto" id="nickname" autofocus="autofocus" />
-
-								<span class="input-group-btn">
-
-								<button class="boton_play" id="startBtn">
-
-									
-									<div class="button__horizontal"></div>
-									<div class="button__vertical"></div>
-									
-									PLAY!
-
-								</button></span>
-
-							</div>
-
-						</div>
-
+					<div class="conjunto_titulo">
+						<img draggable="false" src="./img/xverde.png" class="xverde_titulo">
+						<img draggable="false" src="./img/onaranja.png" class="onaranja_titulo">
+						<h1 class="introduce_nombre">Enter your name</h1>
 					</div>
+					
+
+
+					<input class="texto" id="nickname" autofocus="autofocus" />
+
+
+					<div class="conjunto_play">
+						<img draggable="false" src="./img/oazul.png" class="oazul_play">
+						<img draggable="false" src="./img/xrosa.png" class="xrosa_play">
+						<button class="boton_play" id="startBtn">									
+							PLAY!
+						</button>
+					</div>
+					
+
 
 				</div>
 
@@ -75,7 +67,7 @@
 	</div>
 
      
-    <button id="botonaudio" class="botonaudio" onclick="cambiodeimagen()"><img src="img/sonido_off.png" class="imgsonido" id="imgsonido" alt="silencio"></button>
+    <button id="botonaudio" class="botonaudio" onclick="cambiodeimagen()"><img draggable="false" src="img/sonido_off.png" class="imgsonido" id="imgsonido" alt="silencio"></button>
 
 	<audio src="./audio/musica_fondo.mp3" id="audio" loop>  
         Tu navegador no soporta el elemento<code>audio</code>.  
