@@ -19,7 +19,7 @@ class Board {
     	
         let rowCol = document.createElement('td');
         rowCol.classList.add('boardRow');
-        rowCol.classList.add('bgWhite');
+        rowCol.classList.add('bgDark');
         rowCol.setAttribute('colspan', 5);
         
         let row = document.createElement('tr');
@@ -27,7 +27,7 @@ class Board {
 
         let col = document.createElement('td');
         col.classList.add('boardCol');
-        col.classList.add('bgWhite');
+        col.classList.add('bgDark');
 
         let cell = document.createElement('td');
         cell.classList.add('gameCell');

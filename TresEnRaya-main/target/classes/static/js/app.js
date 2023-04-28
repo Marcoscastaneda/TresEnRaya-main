@@ -134,15 +134,30 @@ function start(){
 	player = {};
 }
 
-startBtn.addEventListener('click', event => {
-    
+
+
+function comprobar_iniciar(){
 	var name = nameInput.value.trim();
 
-    if (name.length > 0) {
-        player.name = name;
-        sendMessage(events.outgoing.JOIN_GAME, { name: name });
-    }
+	if (name.length > 0) {
+		player.name = name;
+		sendMessage(events.outgoing.JOIN_GAME, { name: name });
+	}
+}
+
+startBtn.addEventListener('click', event => {
+	comprobar_iniciar()
 });
+
+window.addEventListener("keydown", (event) => {
+	var tecla = event.keyCode
+	if(tecla == 13){
+		comprobar_iniciar()
+	}
+  
+})
+
+
 
 function startGame() {
 	

@@ -1,3 +1,4 @@
+
 var boton_iniciar = document.getElementById("boton_iniciar");
 
 boton_iniciar.addEventListener("click", prueba)
@@ -28,19 +29,6 @@ boton.addEventListener("click", function(){
        sound = false;
    }
 });
-
-/* TECLA ENTER PARA JUGAR */
-
-var input = document.getElementById("nickname");
-var boton = document.getElementById("startBtn");
-
-input.addEventListener("keyup", jugar)
-function jugar() {
-  if (keyCode === 13) {
-    button.click();
-  }
-};
-
 
 
 
