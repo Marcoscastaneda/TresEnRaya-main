@@ -65,16 +65,36 @@
 				</div>
 
 			</div>
-			<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
+			<div class="col-sm-6 col-sm-offset-3" id="gameBoard">
+			</div>
 		</div>
 	</div>
 
      
-    <button id="botonaudio" class="botonaudio"><img draggable="false" src="img/sonido_off.png" class="imgsonido" id="imgsonido" alt="silencio"></button>
+<button id="botonaudio" class="botonaudio"><img draggable="false" src="img/sonido_off.png" class="imgsonido" id="imgsonido" alt="silencio"></button>
+	
+	<div id="contenedor_emojis" class="contenedor_emojis">
+
+  		<button class="boton_emojis" id="boton_emojis"><img src="img/feliz.png" class="img_emoji_inicial"></button>
+
+  		<div class="panel_emojis" id="panel_emojis">
+
+			<button class="emojis" onclick="beso()"><img src="img/beso.png" id="beso"></button>
+			<button class="emojis" onclick="enojado()"><img src="img/enojado.png" id="enojado"></button>
+			<button class="emojis" onclick="feliz()"><img src="img/feliz.png" id="feliz"></button>
+			<button class="emojis" onclick="llorando()"><img src="img/llorando.png" id="llorando"></button>
+			<button class="emojis" onclick="riendo()"><img src="img/riendo.png" id="riendo"></button>
+			<button class="emojis" onclick="sonoliento()"><img src="img/sonoliento.png" id="sonoliento"></button>
+
+  		</div>
+	</div>
+
 
 	<audio src="./audio/musica_fondo.mp3" id="audio" loop>  
         Tu navegador no soporta el elemento<code>audio</code>.  
     </audio>
+
+	
 
 	<script src="js/Board.js"></script>
 	<script src="js/app.js"></script>

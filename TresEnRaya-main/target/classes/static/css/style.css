@@ -368,3 +368,48 @@ body {
 .xrosa_play:hover{
     rotate: 230deg;
 }
+
+/* BOTON EMOJIS */
+
+.boton_emojis{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: #fff;
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img_emoji_inicial{
+    width: 80%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.panel_emojis{
+    position: absolute;
+    background-color: #fff;
+    width: 160px;
+    left: 2%;
+    top: 15%;
+    padding: 20px;
+    border: white 2px solid;
+    border-radius: 15px;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+    transition: ease 0.5s;
+}
+
+.emojis{
+    margin: 10px;
+    background: none;
+    border: none;
+}

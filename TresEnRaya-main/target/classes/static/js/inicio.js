@@ -30,9 +30,72 @@ boton.addEventListener("click", function(){
    }
 });
 
+/* DESPLEGABLE EMOJIS */
+
+var botonemojis = document.getElementById("boton_emojis");
+var panel_emojis = document.getElementById("panel_emojis");
+var contenedor_emojis = document.getElementById("contenedor_emojis");
+var div_desplegable = false;
+
+contenedor_emojis.addEventListener("click", function(event) {
+  if (event.target !== botonemojis && event.target.parentNode !== botonemojis) {
+    
+    panel_emojis.style.opacity = "0";
+    setTimeout(function() {
+      panel_emojis.style.display = "none";
+    }, 300);
+    div_desplegable = false;
+  } else {
+    
+    if (div_desplegable == false) {
+      panel_emojis.style.display = "inline-block";
+      setTimeout(function() {
+        panel_emojis.style.opacity = "1";
+      }, 50);
+      div_desplegable = true;
+    } else {
+      panel_emojis.style.opacity = "0";
+      setTimeout(function() {
+        panel_emojis.style.display = "none";
+      }, 300);
+      div_desplegable = false;
+    }
+  }
+});
+
+panel_emojis.addEventListener("click", function(event) {
+
+    event.stopPropagation();
+});
 
 
+function beso(){
 
+    alert("beso")
+}
 
+function enojado(){
 
+    alert("enojado")
+}
+
+function feliz(){
+
+    alert("feliz")
+}
+
+function llorando(){
+
+    alert("llorando")
+}
+
+function riendo(){
+
+    alert("riendo")
+}
+
+function sonoliento(){
+
+    alert("sonoliento")
+}
 
