@@ -168,6 +168,30 @@ function startGame() {
     }
 
     board.addTable(container);
+
+
+
+	const redDiv = document.createElement('div');
+	redDiv.classList.add('div_emojis');
+
+	redDiv.addEventListener('click', showBlueDiv);
+
+	function showBlueDiv() {
+		let div = document.createElement('div');
+		div.style.width = '100px';
+		div.style.height = '100px';
+		div.style.background = 'blue';
+		div.style.position = 'absolute';
+		div.style.top = Math.floor(Math.random() * (window.innerHeight - 200)) + 'px';
+		div.style.left = Math.floor(Math.random() * (window.innerWidth - 200)) + 'px';
+		document.body.appendChild(div);
+		setTimeout(() => {
+		  document.body.removeChild(div);
+		}, 500);
+	}
+
+	document.body.appendChild(redDiv);
+
 }
 
 function sendMessage(action, data) {

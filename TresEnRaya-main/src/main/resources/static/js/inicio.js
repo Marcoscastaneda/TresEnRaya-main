@@ -1,9 +1,9 @@
 
 var boton_iniciar = document.getElementById("boton_iniciar");
 
-boton_iniciar.addEventListener("click", prueba)
+boton_iniciar.addEventListener("click", iniciar_cambio_nombre)
 
-function prueba(){
+function iniciar_cambio_nombre(){
     
     var inicio = document.getElementById("inicio")
 
