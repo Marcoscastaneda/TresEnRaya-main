@@ -396,6 +396,8 @@ img_emoji_inicial{
 }
 
 .panel_emojis{
+    display: none;
+    opacity: 0;
     position: absolute;
     background-color: #fff;
     width: 160px;
