@@ -67,35 +67,3 @@ panel_emojis.addEventListener("click", function(event) {
 
     event.stopPropagation();
 });
-
-
-function beso(){
-
-    alert("beso")
-}
-
-function enojado(){
-
-    alert("enojado")
-}
-
-function feliz(){
-
-    alert("feliz")
-}
-
-function llorando(){
-
-    alert("llorando")
-}
-
-function riendo(){
-
-    alert("riendo")
-}
-
-function sonoliento(){
-
-    alert("sonoliento")
-}
-

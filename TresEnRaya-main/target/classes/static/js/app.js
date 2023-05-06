@@ -171,12 +171,11 @@ function startGame() {
 
 
 
-	const redDiv = document.createElement('div');
-	redDiv.classList.add('div_emojis');
 
-	redDiv.addEventListener('click', showBlueDiv);
+	/* EMOJIS */
 
-	function showBlueDiv() {
+
+	/*function showBlueDiv() {
 		let div = document.createElement('div');
 		div.style.width = '100px';
 		div.style.height = '100px';
@@ -188,9 +187,62 @@ function startGame() {
 		setTimeout(() => {
 		  document.body.removeChild(div);
 		}, 500);
-	}
+	}*/
 
-	document.body.appendChild(redDiv);
+	var boton_emojis = document.getElementById("boton_emojis")
+	boton_emojis.style.display = "flex"
+
+
+
+	var beso = document.getElementById("beso");
+	beso.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/beso.png');
+	});
+
+	var enojado = document.getElementById("enojado");
+	enojado.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/enojado.png');
+	});
+
+	var feliz = document.getElementById("feliz");
+	feliz.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/feliz.png');
+	});
+
+	var llorando = document.getElementById("llorando");
+	llorando.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/llorando.png');
+	});
+
+	var riendo = document.getElementById("riendo");
+	riendo.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/riendo.png');
+	});
+
+	var sonoliento = document.getElementById("sonoliento");
+	sonoliento.addEventListener("click", function(event) {
+		showBlueDiv(event, 'img/sonoliento.png');
+	});
+
+
+
+
+	function showBlueDiv(event, img) {
+		let emoji = document.createElement('img');
+		emoji.style.width = '100px';
+		emoji.style.height = '100px';
+		emoji.style.position = 'absolute';
+		emoji.style.top = Math.floor(Math.random() * (window.innerHeight - 200)) + 'px';
+		emoji.style.left = Math.floor(Math.random() * (window.innerWidth - 200)) + 'px';
+		emoji.src = img
+		document.body.appendChild(emoji);
+		setTimeout(() => {
+			document.body.removeChild(emoji);
+		}, 500);
+	}
+	
+	
+	  
 
 }
 
