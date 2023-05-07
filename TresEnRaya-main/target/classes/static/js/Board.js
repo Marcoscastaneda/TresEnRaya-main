@@ -6,10 +6,12 @@ class Board {
     	
         this.cells = [];
         this.players = [];
-        this.ready = false;   
+        this.ready = false;
+        this.connectedPlayers = 0; // inicialmente, no hay jugadores conectados
         
         this.createTable();
     }
+
 
     createTable() {
     	
@@ -153,25 +155,36 @@ class Board {
     }
 
     addPlayer(player) {
-    	
         if (this.players.length < 2) {
-
             if (this.players.length === 0 || this.players[0].id != player.id) {
-            	
                 this.players.push(player);
-                
+    
                 let score = this.scoreBoard[this.players.length - 1];
-
+    
                 if (this.players.length === 1) {
-                	score.textContent = player.label + ' ' + player.name;
+                    score.textContent = player.label + ' ' + player.name;
                 } else {
-                	score.textContent = player.name + ' ' + player.label;
+                    score.textContent = player.name + ' ' + player.label;
                 }
-
+    
                 score.setAttribute('playerId', player.id);
+
+                this.connectedPlayers++; // incrementa el contador de jugadores conectados
+    
+
+                if(this.connectedPlayers == 2){ // comprueba si hay dos jugadores conectados
+                    alert("conectados")
+                    let div_corono = document.createElement('div');
+                    div_corono.style.backgroundColor = 'red';
+                    div_corono.style.width = '100px';
+                    div_corono.style.height = '100px';
+                    div_corono.style.position = 'absolute';
+                    document.body.appendChild(div_corono)
+                }
             }
         }
     }
+    
     
     restart(){
     	

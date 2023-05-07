@@ -84,6 +84,8 @@ function start(){
 	            break;
 
 	        case events.incoming.GAME_OVER:
+				
+				
 	            if (msg.data) {
 	                board.doWinner(msg.data.player.name, msg.data.pos);
 	            } else {
@@ -94,6 +96,20 @@ function start(){
 	            	setTimeout(()=> 
 	            		sendMessage(events.outgoing.RESTART, { playerId: player.id}), 2000);
 	            }
+
+
+				let reiniciar = document.createElement('div');
+                reiniciar.style.backgroundColor = 'blue';
+				reiniciar.style.top = '30%';
+                reiniciar.style.width = '100px';
+                reiniciar.style.height = '100px';
+                reiniciar.style.position = 'absolute';
+                document.body.appendChild(reiniciar)
+
+				reiniciar.addEventListener("click", recargar)
+				function recargar(){
+					location.reload()
+				}
 
 	            break;
 
@@ -170,24 +186,7 @@ function startGame() {
     board.addTable(container);
 
 
-
-
 	/* EMOJIS */
-
-
-	/*function showBlueDiv() {
-		let div = document.createElement('div');
-		div.style.width = '100px';
-		div.style.height = '100px';
-		div.style.background = 'blue';
-		div.style.position = 'absolute';
-		div.style.top = Math.floor(Math.random() * (window.innerHeight - 200)) + 'px';
-		div.style.left = Math.floor(Math.random() * (window.innerWidth - 200)) + 'px';
-		document.body.appendChild(div);
-		setTimeout(() => {
-		  document.body.removeChild(div);
-		}, 500);
-	}*/
 
 	var boton_emojis = document.getElementById("boton_emojis")
 	boton_emojis.style.display = "flex"
@@ -257,3 +256,7 @@ function sendMessage(action, data) {
 }
 
 start();
+
+
+
+
