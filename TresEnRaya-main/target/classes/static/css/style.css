@@ -444,3 +444,45 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+/* Boton de reinicio de la partida*/
+
+.div_reiniciar{
+    position: absolute;
+    background-color: rgb(221, 252, 173);
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton_reiniciar{
+    z-index: 1;
+    background-color: pink;
+    height: 80px;
+    width: 180px;
+    border: 2px solid black;
+    border-radius: 30px;
+    color: black;
+    text-align: center;
+    font-size: 1vw;
+    font-weight: bold;
+    padding: 16px 32px;
+    display: inline-block;
+    box-shadow: 0px 0px 10px 5px rgb(136, 201, 131);
+    height: 80px;
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultados{
+    font-size: 3rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+

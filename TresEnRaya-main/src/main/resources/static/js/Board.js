@@ -132,7 +132,9 @@ class Board {
     		looser = this.players[0].name;
     	}
     	
-    	alert(winner+" wins! "+looser+" looses.");
+        
+        document.getElementById("resultados").innerHTML = winner+" is the winner, "+looser+" is a looser ";
+
     	
     	this.disableAll();
         this.highlightCells(pos);
