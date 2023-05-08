@@ -98,15 +98,10 @@ function start(){
 	            }
 
 
-				let reiniciar = document.createElement('div');
-                reiniciar.style.backgroundColor = 'blue';
-				reiniciar.style.top = '30%';
-                reiniciar.style.width = '100px';
-                reiniciar.style.height = '100px';
-                reiniciar.style.position = 'absolute';
-                document.body.appendChild(reiniciar)
+				let div_reiniciar = document.getElementById('div_reiniciar');
+				div_reiniciar.style.display = "flex";
 
-				reiniciar.addEventListener("click", recargar)
+				boton_reiniciar.addEventListener("click", recargar)
 				function recargar(){
 					location.reload()
 				}
@@ -195,38 +190,38 @@ function startGame() {
 
 	var beso = document.getElementById("beso");
 	beso.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/beso.png');
+		mostrar_emojis(event, 'img/beso.png');
 	});
 
 	var enojado = document.getElementById("enojado");
 	enojado.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/enojado.png');
+		mostrar_emojis(event, 'img/enojado.png');
 	});
 
 	var feliz = document.getElementById("feliz");
 	feliz.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/feliz.png');
+		mostrar_emojis(event, 'img/feliz.png');
 	});
 
 	var llorando = document.getElementById("llorando");
 	llorando.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/llorando.png');
+		mostrar_emojis(event, 'img/llorando.png');
 	});
 
 	var riendo = document.getElementById("riendo");
 	riendo.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/riendo.png');
+		mostrar_emojis(event, 'img/riendo.png');
 	});
 
 	var sonoliento = document.getElementById("sonoliento");
 	sonoliento.addEventListener("click", function(event) {
-		showBlueDiv(event, 'img/sonoliento.png');
+		mostrar_emojis(event, 'img/sonoliento.png');
 	});
 
 
 
 
-	function showBlueDiv(event, img) {
+	function mostrar_emojis(event, img) {
 		let emoji = document.createElement('img');
 		emoji.style.width = '100px';
 		emoji.style.height = '100px';

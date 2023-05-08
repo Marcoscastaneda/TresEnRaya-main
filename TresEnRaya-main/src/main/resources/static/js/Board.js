@@ -132,7 +132,9 @@ class Board {
     		looser = this.players[0].name;
     	}
     	
-    	alert(winner+" wins! "+looser+" looses.");
+        
+        document.getElementById("resultados").innerHTML = winner+" is the winner, "+looser+" is a looser ";
+
     	
     	this.disableAll();
         this.highlightCells(pos);
@@ -173,14 +175,37 @@ class Board {
     
 
                 if(this.connectedPlayers == 2){ // comprueba si hay dos jugadores conectados
-                    alert("conectados")
-                    let div_corono = document.createElement('div');
-                    div_corono.style.backgroundColor = 'red';
-                    div_corono.style.width = '100px';
-                    div_corono.style.height = '100px';
-                    div_corono.style.position = 'absolute';
-                    document.body.appendChild(div_corono)
+                    let div_crono = document.getElementById('div_crono');
+                    div_crono.style.display = "flex"
+
+
+
+
+                    let segundos_crono = 0;
+                    let minutos_crono = 0;
+                    let horas_crono = 0;
+
+
+                    function updateTime() {
+                        segundos_crono++;
+                        if (segundos_crono === 60) {
+                        segundos_crono = 0;
+                        minutos_crono++;
+                        if (minutos_crono === 60) {
+                            minutos_crono = 0;
+                            horas_crono++;
+                        }
+                        }
+                        document.getElementById("texto_crono").textContent = `${horas_crono
+                        .toString()
+                        .padStart(2, "0")}:${minutos_crono.toString().padStart(2, "0")}:${segundos_crono
+                        .toString()
+                        .padStart(2, "0")}`;
+                    }
+
+                    setInterval(updateTime, 1000);
                 }
+
             }
         }
     }
