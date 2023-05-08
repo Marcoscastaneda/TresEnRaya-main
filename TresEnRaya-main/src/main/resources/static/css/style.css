@@ -57,14 +57,14 @@ body {
 .gameBoard td {
     text-align: center;
     color: #516D66;
-    font-size: 8em;
+    font-size: 10vh;
     cursor: pointer;
     transition: all 0.5s;
 }
 
 .gameCell {
-    width: 25vh;
-    height: 25vh;
+    width: 15vh;
+    height: 15vh;
 }
 
 .gameCell:not(.marked):hover {
@@ -319,14 +319,15 @@ body {
     height: 40%;
     width: 20%;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     background-color: antiquewhite;
     border: 1px solid black;
     border-radius: 30px;
     color: black;
     font-size: 1vw;
     font-weight: bold;
-    padding: 16px 32px;
-    display: inline-block;
+    display: flex;
     box-shadow: 0px 0px 10px 5px rgb(136, 201, 131);
     transition: 0.3s;
 }
@@ -401,7 +402,7 @@ body {
     background-color: #fff;
     width: 160px;
     left: 2%;
-    top: 15%;
+    top: 20%;
     padding: 20px;
     border: white 2px solid;
     border-radius: 15px;
@@ -418,4 +419,28 @@ body {
 
 .img_emoji{
     height: 45px;
+}
+
+
+/* CRONOMETRO DE SESION */
+
+.div_crono{
+    background-color: #f0f0f0;
+    z-index: 999;
+    display: none;
+    position: absolute;
+    transform: translate(-50%,0);
+    left: 50%;
+    top: 5%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 50px;
+    width: 100px;
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+    justify-content: center;
+    align-items: center;
 }
