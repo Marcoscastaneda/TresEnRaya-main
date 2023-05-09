@@ -84,6 +84,8 @@ function start(){
 	            break;
 
 	        case events.incoming.GAME_OVER:
+				
+				
 	            if (msg.data) {
 	                board.doWinner(msg.data.player.name, msg.data.pos);
 	            } else {
@@ -94,6 +96,15 @@ function start(){
 	            	setTimeout(()=> 
 	            		sendMessage(events.outgoing.RESTART, { playerId: player.id}), 2000);
 	            }
+
+
+				let div_reiniciar = document.getElementById('div_reiniciar');
+				div_reiniciar.style.display = "flex";
+
+				boton_reiniciar.addEventListener("click", recargar)
+				function recargar(){
+					location.reload()
+				}
 
 	            break;
 
@@ -134,15 +145,30 @@ function start(){
 	player = {};
 }
 
-startBtn.addEventListener('click', event => {
-    
+
+
+function comprobar_iniciar(){
 	var name = nameInput.value.trim();
 
-    if (name.length > 0) {
-        player.name = name;
-        sendMessage(events.outgoing.JOIN_GAME, { name: name });
-    }
+	if (name.length > 0) {
+		player.name = name;
+		sendMessage(events.outgoing.JOIN_GAME, { name: name });
+	}
+}
+
+startBtn.addEventListener('click', event => {
+	comprobar_iniciar()
 });
+
+window.addEventListener("keydown", (event) => {
+	var tecla = event.keyCode
+	if(tecla == 13){
+		comprobar_iniciar()
+	}
+  
+})
+
+
 
 function startGame() {
 	
@@ -153,6 +179,65 @@ function startGame() {
     }
 
     board.addTable(container);
+
+
+	/* EMOJIS */
+
+	var boton_emojis = document.getElementById("boton_emojis")
+	boton_emojis.style.display = "flex"
+
+
+
+	var beso = document.getElementById("beso");
+	beso.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/beso.png');
+	});
+
+	var enojado = document.getElementById("enojado");
+	enojado.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/enojado.png');
+	});
+
+	var feliz = document.getElementById("feliz");
+	feliz.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/feliz.png');
+	});
+
+	var llorando = document.getElementById("llorando");
+	llorando.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/llorando.png');
+	});
+
+	var riendo = document.getElementById("riendo");
+	riendo.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/riendo.png');
+	});
+
+	var sonoliento = document.getElementById("sonoliento");
+	sonoliento.addEventListener("click", function(event) {
+		mostrar_emojis(event, 'img/sonoliento.png');
+	});
+
+
+
+
+	function mostrar_emojis(event, img) {
+		let emoji = document.createElement('img');
+		emoji.style.width = '100px';
+		emoji.style.height = '100px';
+		emoji.style.position = 'absolute';
+		emoji.style.top = Math.floor(Math.random() * (window.innerHeight - 200)) + 'px';
+		emoji.style.left = Math.floor(Math.random() * (window.innerWidth - 200)) + 'px';
+		emoji.src = img
+		document.body.appendChild(emoji);
+		setTimeout(() => {
+			document.body.removeChild(emoji);
+		}, 500);
+	}
+	
+	
+	  
+
 }
 
 function sendMessage(action, data) {
@@ -166,3 +251,7 @@ function sendMessage(action, data) {
 }
 
 start();
+
+
+
+

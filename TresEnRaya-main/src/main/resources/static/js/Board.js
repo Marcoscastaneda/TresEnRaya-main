@@ -6,10 +6,12 @@ class Board {
     	
         this.cells = [];
         this.players = [];
-        this.ready = false;   
+        this.ready = false;
+        this.connectedPlayers = 0; // inicialmente, no hay jugadores conectados
         
         this.createTable();
     }
+
 
     createTable() {
     	
@@ -19,7 +21,7 @@ class Board {
     	
         let rowCol = document.createElement('td');
         rowCol.classList.add('boardRow');
-        rowCol.classList.add('bgWhite');
+        rowCol.classList.add('bgDark');
         rowCol.setAttribute('colspan', 5);
         
         let row = document.createElement('tr');
@@ -27,7 +29,7 @@ class Board {
 
         let col = document.createElement('td');
         col.classList.add('boardCol');
-        col.classList.add('bgWhite');
+        col.classList.add('bgDark');
 
         let cell = document.createElement('td');
         cell.classList.add('gameCell');
@@ -130,7 +132,9 @@ class Board {
     		looser = this.players[0].name;
     	}
     	
-    	alert(winner+" wins! "+looser+" looses.");
+        
+        document.getElementById("resultados").innerHTML = winner+" is the winner, "+looser+" is a looser ";
+
     	
     	this.disableAll();
         this.highlightCells(pos);
@@ -153,25 +157,59 @@ class Board {
     }
 
     addPlayer(player) {
-    	
         if (this.players.length < 2) {
-
             if (this.players.length === 0 || this.players[0].id != player.id) {
-            	
                 this.players.push(player);
-                
+    
                 let score = this.scoreBoard[this.players.length - 1];
-
+    
                 if (this.players.length === 1) {
-                	score.textContent = player.label + ' ' + player.name;
+                    score.textContent = player.label + ' ' + player.name;
                 } else {
-                	score.textContent = player.name + ' ' + player.label;
+                    score.textContent = player.name + ' ' + player.label;
+                }
+    
+                score.setAttribute('playerId', player.id);
+
+                this.connectedPlayers++; // incrementa el contador de jugadores conectados
+    
+
+                if(this.connectedPlayers == 2){ // comprueba si hay dos jugadores conectados
+                    let div_crono = document.getElementById('div_crono');
+                    div_crono.style.display = "flex"
+
+
+
+
+                    let segundos_crono = 0;
+                    let minutos_crono = 0;
+                    let horas_crono = 0;
+
+
+                    function updateTime() {
+                        segundos_crono++;
+                        if (segundos_crono === 60) {
+                        segundos_crono = 0;
+                        minutos_crono++;
+                        if (minutos_crono === 60) {
+                            minutos_crono = 0;
+                            horas_crono++;
+                        }
+                        }
+                        document.getElementById("texto_crono").textContent = `${horas_crono
+                        .toString()
+                        .padStart(2, "0")}:${minutos_crono.toString().padStart(2, "0")}:${segundos_crono
+                        .toString()
+                        .padStart(2, "0")}`;
+                    }
+
+                    setInterval(updateTime, 1000);
                 }
 
-                score.setAttribute('playerId', player.id);
             }
         }
     }
+    
     
     restart(){
     	
