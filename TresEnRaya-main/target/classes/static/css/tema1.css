@@ -1,0 +1,240 @@
+
+
+body {
+    background: rgb(0, 0, 0);
+    display: absolute;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-family: 'Uranium', sans-serif;
+}
+
+.container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+::selection {
+    background: transparent;
+}
+
+.bgWhite {
+    background: #F5F2F5;
+}
+
+.colorWhite {
+    color: #F5F2F5 !important;
+}
+
+.bgDark {
+    background: #516D66;
+}
+
+.bgRed {
+    background: #F286A0;
+}
+
+.colorRed {
+    color: #F286A0 !important;
+}
+
+.gameBoard, .scoreBoard {
+    font-weight: 400;
+}
+
+.gameBoard {
+    width: 100%;
+}
+
+.gameBoard td {
+    text-align: center;
+    color: #ffffff;
+    font-size: 8em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.gameCell {
+    width: 25vh;
+    height: 25vh;
+}
+
+.gameCell:not(.marked):hover {
+    box-shadow: 0 0 72px #555;
+}
+
+.gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
+    box-shadow: none !important;
+    cursor: default;
+}
+
+.scoreBoard {
+    top: 0;
+    color: #b684c0;
+    height: 100px;
+}
+
+.jugador1{
+    position: absolute;
+    left: 5%;
+}
+
+.jugador2{
+    position: absolute;
+    right: 5%;
+}
+
+.boardCol {
+    width: 5px;
+    box-shadow: 0 0 3px 3px #450f6d;
+    cursor: default !important;
+}
+
+.boardRow {
+    height: 5px;
+    box-shadow: 0 0 3px 3px #450f6d;
+    cursor: default !important;
+}
+
+.scoreBoard span.active {
+    animation: cambiaColor 1s infinite;
+}
+@keyframes cambiaColor {
+    0% { border-bottom: 4px solid red; }
+    50% { border-bottom: 4px solid green; }
+    100% { border-bottom: 4px solid blue; }
+  }
+/* MUSICA */
+
+.botonaudio{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: #fff;
+    background-image: url("./img/sonido_on");
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.botontema{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: #fff;
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.icotheme{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+.botonaudio:hover{
+    box-shadow: 0 0 20px 1px rgb(117,199,251);
+}
+
+/* -------- */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+
+.star {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgba(237, 205, 163, 0.8);
+  box-shadow: 0 0 40px 0 rgba(237, 205, 163, 0.8), 0 0 20px 0 #ffffff;
+  animation: glow 5s infinite;
+}
+.star--medium {
+  width: 6px;
+  height: 6px;
+}
+.star--big {
+  width: 9px;
+  height: 9px;
+  box-shadow: 0 0 40px 0 #edcda3, 0 0 20px 0 #ffffff, inset 0 0 4px #ffffff;
+}
+
+.comet {
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 40px 0 #edcda3, 0 0 20px 0 #ffffff, inset 0 0 8px rgba(255, 255, 255, 0.6);
+  top: 0;
+  left: 80%;
+  opacity: 0.3;
+  transform: rotate(-45deg) translate(0, -50px);
+  animation: comet 6s infinite;
+}
+.comet:after {
+  content: "";
+  width: 20vw;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(237, 205, 163, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+@keyframes comet {
+  0% {
+    transform: rotate(-45deg) translateX(0);
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: rotate(-45deg) translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(-45deg) translateX(-100vw);
+    opacity: 0;
+  }
+}
+body{
+    color: #0000AA; 
+}

@@ -1,0 +1,201 @@
+
+
+body {
+    background-image: url('../img/bgcyber.png');
+    background-size: cover;
+    display: absolute;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-family: 'GHORA trial', sans-serif;
+    background-size: cover;                                                                                 
+}
+
+.container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+::selection {
+    background: transparent;
+}
+
+.bgWhite {
+    background: #F5F2F5;
+}
+
+.colorWhite {
+    color: #F5F2F5 !important;
+}
+
+.bgDark {
+    background: #516D66;
+}
+
+.bgRed {
+    background: #F286A0;
+}
+
+.colorRed {
+    color: #F286A0 !important;
+}
+
+.gameBoard, .scoreBoard {
+    font-weight: 400;
+}
+
+.gameBoard {
+    width: 100%;
+}
+
+.gameBoard td {
+    text-align: center;
+    color: #e5ff00;
+    font-size: 8em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.gameCell {
+    width: 25vh;
+    height: 25vh;
+}
+
+.gameCell:not(.marked):hover {
+    box-shadow: 0 0 42px #555555;
+}
+
+.gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
+    box-shadow: none !important;
+    cursor: default;
+}
+
+.scoreBoard {
+    top: 0;
+    color: #000000;
+    height: 100px;
+}
+
+.jugador1{
+    position: absolute;
+    left: 5%;
+    color:#e5ff00;
+}
+
+.jugador2{
+    color:#e5ff00;
+    position: absolute;
+    right: 5%;
+}
+
+.boardCol {
+    width: 5px;
+    box-shadow: 0 0 3px 3px #e5ff00;
+    animation: pulsate 0.11s ease-in-out infinite alternate;   
+    cursor: default !important;
+}
+
+.boardRow {
+    height: 5px;
+    box-shadow: 0 0 3px 3px #e5ff00;
+    animation: pulsate 0.11s ease-in-out infinite alternate;    
+    cursor: default !important;
+}
+
+.scoreBoard span.active {
+    animation: cambiaColor 1s infinite;
+}
+@keyframes cambiaColor {
+    0% { border-bottom: 4px solid rgb(0, 0, 0); }
+    50% { border-bottom: 4px solid rgb(105, 110, 0); }
+    100% { border-bottom: 4px solid rgb(0, 0, 0); }
+  }
+
+
+@keyframes pulsate {
+100% {
+    /* Larger blur radius */
+    box-shadow:
+    0 0 4px #fff,
+    0 0 11px #fff,
+    0 0 19px #fff,
+    0 0 40px #e5ff00,
+    0 0 80px #e5ff00,
+    0 0 90px #e5ff00,
+    0 0 100px #e5ff00,
+    0 0 150px #e5ff00;
+}
+0% {
+    /* A slightly smaller blur radius */
+    box-shadow:
+    0 0 4px #fff,
+    0 0 10px #fff,
+    0 0 18px #fff,
+    0 0 38px #e5ff00,
+    0 0 73px #e5ff00,
+    0 0 80px #e5ff00,
+    0 0 94px #e5ff00,
+    0 0 140px #e5ff00;
+}
+}
+/* MUSICA */
+
+.botonaudio{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: #fff;
+    background-image: url("./img/sonido_on");
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.botontema{
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    border: white 2px solid;
+    border-radius: 15px;
+    height: 60px;
+    width: 65px;
+    color: #fff;
+    padding: 5px;
+    transition: ease 0.5s;
+    box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.icotheme{
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+.botonaudio:hover{
+    box-shadow: 0 0 20px 1px rgb(117,199,251);
+}
+
+/* -------- */
+html,
+body {
+    background-image: url('../img/bgcyber.png');
+    background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+
+}
