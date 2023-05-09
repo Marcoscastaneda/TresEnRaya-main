@@ -87,7 +87,7 @@ botontema.addEventListener("click", function aparecer_iconos(){
         for(var i=0; i<iconthemes.length; i++){
             iconthemes[i].style.display = "flex";
         }
-        botontema.style.height = "40%";
+        botontema.style.height = "250px";
         botontema.style.boxShadow = " 0 0 20px 1px rgb(117,199,251)";
         button_desplegado = true;
         var i = 0;
