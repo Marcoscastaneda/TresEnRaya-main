@@ -1,0 +1,287 @@
+
+
+body {
+  background-image: url('../img/playa.png');
+  background-size: cover;
+  background-position-y: bottom;
+  display: absolute;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  font-family: 'AlphaRope', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.container{
+  position: absolute;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+::selection {
+  background: transparent;
+}
+
+.bgWhite {
+  background: #F5F2F5;
+}
+
+.colorWhite {
+  color: #F5F2F5 !important;
+}
+
+.bgDark {
+  background: #516D66;
+}
+
+.bgRed {
+  background: #F286A0;
+}
+
+.colorRed {
+  color: #F286A0 !important;
+}
+
+.gameBoard, .scoreBoard {
+  font-weight: 400;
+}
+
+.gameBoard {
+  width: 100%;
+}
+
+.gameBoard td {
+  text-align: center;
+  color: #000000;
+  font-size: 8em;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.gameCell {
+  width: 25vh;
+  height: 25vh;
+}
+
+.gameCell:not(.marked):hover {
+  box-shadow: 0 0 42px #555;
+  background-color: rgba(255, 255, 255, 0.5); /* fondo transparente */
+  backdrop-filter: blur(5px); /* efecto de desenfoque */  
+}
+
+.gameBoard td.gameCell.notActive:hover, .gameBoard td.gameCell.notActive:active {
+  box-shadow: none !important;
+  cursor: default;
+}
+
+.scoreBoard {
+  top: 0;
+  color: #516D66;
+  height: 100px;
+}
+
+.jugador1{
+  position: absolute;
+  color:#322806;
+  left: 5%;
+}
+
+.jugador2{
+  position: absolute;
+  color:#322806;
+  right: 5%;
+}
+
+.boardCol {
+  width: 5px;
+  cursor: default !important;
+}
+
+.boardRow {
+  height: 5px;
+  cursor: default !important;
+}
+
+.scoreBoard span.active {
+  animation: cambiaColor 1s infinite;
+}
+@keyframes cambiaColor {
+  0% { border-bottom: 4px solid rgb(42, 223, 255); }
+  50% { border-bottom: 4px solid rgb(233, 235, 235); }
+  100% { border-bottom: 4px solid rgb(117, 234, 247); }
+}
+
+
+
+
+/*Pagina de inicio */
+
+.inicio{
+  background-color: rgb(221, 252, 173);
+  position: absolute;
+  width: 75%;
+  height: 80%;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center; 
+  transition: 0.7s;
+  opacity: 1;
+}
+
+.titulo_principal{
+  width: 50%;
+  position: absolute;
+  background-color: rgb(221, 252, 173); 
+  position: absolute;
+  top: -10%;
+}
+
+.boton_iniciar{
+  position: absolute;
+  width: 15%;
+  height: 15%;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+  font-size: 2vw;
+  transform: translate(-50%, 0);
+  background: rgb(117,199,251);
+  background: linear-gradient(90deg, rgba(117,199,251,1) 0%, rgba(255,102,196,1) 50%, rgba(255,189,89,1) 100%);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: ease 0.5s;
+  font-family: 'Barlow Condensed';
+  font-weight: bold;
+  color: rgb(221, 252, 173);
+}
+
+.boton_iniciar:hover{
+  top: 57.5%;
+  width: 20%;
+  height: 20%;
+  font-size: 3vw;
+}
+
+.interior{
+  background-color: rgb(25, 130, 196);
+  height: 92%;
+  width: 95%;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;    
+  align-items: center;
+}
+
+/* MUSICA */
+
+.botonaudio{
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  border: white 2px solid;
+  border-radius: 15px;
+  height: 60px;
+  width: 65px;
+  color: #fff;
+  background-image: url("./img/sonido_on");
+  padding: 5px;
+  transition: ease 0.5s;
+  box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.botontema{
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 15%;
+  border: white 2px solid;
+  border-radius: 15px;
+  height: 60px;
+  width: 65px;
+  color: #fff;
+  padding: 5px;
+  transition: ease 0.5s;
+  box-shadow: 0 0 5px 1px rgb(117,199,251);
+}
+.icotheme{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  
+}
+.botonaudio:hover{
+  box-shadow: 0 0 20px 1px rgb(117,199,251);
+}
+
+/* PAGINA INICIO */
+
+
+.introduce_nombre {
+  color: #000000;
+  font-size: 4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  left: 50%;
+  transform: translate(0 , -50%);
+}
+
+.texto{
+  position: absolute;
+  height: 20px;
+  width: 20%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 10px #3EB489;
+}
+
+.boton_play{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  background-color: antiquewhite;
+  border: 2px solid black;
+  border-radius: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 32px;
+  display: inline-block;
+  box-shadow: 0px 5px 10px #3EB489;
+  transition: all 0.3s ease-in-out;
+  padding: 5px;
+}
+
+
+.general{
+  background-color: rgb(221, 252, 173);
+  position: absolute;
+  height: 80%;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.boton:hover {
+background-color: #3e8e41;
+box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+transform: translateY(-2px);
+}
