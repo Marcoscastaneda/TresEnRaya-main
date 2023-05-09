@@ -393,7 +393,7 @@ body {
     box-shadow: 0 0 5px 1px rgb(117,199,251);
     transition: ease 0.5s;
     z-index: 999;
-}
+    }
 
 .emojis{
     margin: 10px;

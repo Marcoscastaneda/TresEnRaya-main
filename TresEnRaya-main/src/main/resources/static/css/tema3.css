@@ -429,19 +429,19 @@ padding: 0px;
 }
 
 .panel_emojis{
-display: none;
-opacity: 0;
-position: absolute;
-background-color: #fff;
-width: 170px;
-left: 2%;
-top: 20%;
-padding: 20px;
-border: white 2px solid;
-border-radius: 15px;
-box-shadow: 0 0 5px 1px rgb(117,199,251);
-transition: ease 0.5s;
-z-index: 999;
+  display: none;
+  opacity: 0;
+  position: absolute;
+  background-color: #fff;
+  width: 170px;
+  left: 2%;
+  top: 20%;
+  padding: 20px;
+  border: white 2px solid;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 1px rgb(117,199,251);
+  transition: ease 0.5s;
+  z-index: 999;
 }
 
 .emojis{
