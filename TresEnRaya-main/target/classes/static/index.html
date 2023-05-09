@@ -1,27 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>tictactoe</title>
-	<link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-	<link id="tema" rel="stylesheet" href="css/style.css">
-
-	<link href="https://fonts.cdnfonts.com/css/uranium" rel="stylesheet">
-	<link href="https://fonts.cdnfonts.com/css/ldr-manufacture" rel="stylesheet">
-	<link href="https://fonts.cdnfonts.com/css/ghora-trial" rel="stylesheet">
-	<link href="https://fonts.cdnfonts.com/css/alpharope" rel="stylesheet">
-                
-
+<head>        
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 
 <meta name="language" content="english">
 <meta name="copyright" content="tictactoe.io">
@@ -31,13 +13,16 @@
 <meta name="keywords" content="TicTacToe, Online Game, Multiplayer">
 <title>TicTacToe - Multiplayer Game</title>
 
-
+<link href="https://fonts.cdnfonts.com/css/uranium" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/ldr-manufacture" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/ghora-trial" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/alpharope" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
 
+<link id="tema" rel="stylesheet" href="css/style.css">  
 </head>
 <body>
 	
@@ -51,9 +36,6 @@
 	<div class="container">
 		<div class="row">
 			<div class="scoreBoard jugador1">
-				<!--<div class="div_emojis">
-
-				</div>-->
 				<h1>
 					<span id="p1Score"></span>
 				</h1>
@@ -121,6 +103,7 @@
 
 
     <button id="botonaudio" class="botonaudio"><img src="img/sonido_off.png" id="imgsonido" alt="silencio"></button>
+	
 	<button id="botontema" class="botontema">
 		<img src="img/themes.png" class = "icotheme1" id="botonEstilo0"  draggable="false">
 		<img src="img/planetas.png" class = "icotheme" id="botonEstilo1" draggable="false">
@@ -137,7 +120,6 @@
 
 
 
-
 	<div class="div_crono" id="div_crono">
 		<p id="texto_crono">00:00:00</p>
 	</div>
@@ -147,8 +129,6 @@
 		<button class="boton_reiniciar" id="boton_reiniciar">Restart The Game!!</button>
 		<h1 id="resultados" class="resultados"></h1>
 	</div>
-
-
 
 
 	<script src="js/Board.js"></script>

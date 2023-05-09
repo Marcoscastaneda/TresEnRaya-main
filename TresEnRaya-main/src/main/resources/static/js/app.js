@@ -158,12 +158,14 @@ function comprobar_iniciar(){
 
 startBtn.addEventListener('click', event => {
 	comprobar_iniciar()
+	btnTheme.style.display = "block";
 });
 
 window.addEventListener("keydown", (event) => {
 	var tecla = event.keyCode
 	if(tecla == 13){
 		comprobar_iniciar()
+		btnTheme.style.display = "block";
 	}
   
 })
