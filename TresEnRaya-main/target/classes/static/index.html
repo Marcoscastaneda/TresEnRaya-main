@@ -1,139 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>        
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="language" content="english">
-<meta name="copyright" content="tictactoe.io">
-<meta name="audience" content="all">
-<link rel="shortcut icon" href="img/icono.png">
-<meta name="description" content="Play TicTacToe online with friends. Have fun competing in this classic two-player game!">
-<meta name="keywords" content="TicTacToe, Online Game, Multiplayer">
-<title>TicTacToe - Multiplayer Game</title>
-
-<link rel="preload" href="img/bgcyber.png" as="image">
-<link rel="preload" href="img/playa.png" as="image">
-
-<link href="https://fonts.cdnfonts.com/css/uranium" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/ldr-manufacture" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/ghora-trial" rel="stylesheet">
-<link href="https://fonts.cdnfonts.com/css/alpharope" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-
-<link id="tema" rel="stylesheet" href="css/style.css">  
-</head>
-<body>
-	
-	<div class="inicio" id="inicio">
-		<img draggable="false" src="img/TicTacToe_png.png" class="titulo_principal">
-		<div class="boton_iniciar" id="boton_iniciar">
-				<div class="interior"><p>LET'S PLAY!!</p></div>
-		</div>
-	</div>
-
-	<div class="container">
-		<div class="row">
-			<div class="scoreBoard jugador1">
-				<h1>
-					<span id="p1Score"></span>
-				</h1>
-			</div>
-			<div class="scoreBoard jugador2">
-				<h1 class="text-right">
-					<span id="p2Score"></span>
-				</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3" id="joinForm">
-
-				<div class="general">
-
-					<div class="conjunto_titulo">
-						<img draggable="false" src="./img/xverde.png" class="xverde_titulo">
-						<img draggable="false" src="./img/onaranja.png" class="onaranja_titulo">
-						<h1 class="introduce_nombre">Enter your name</h1>
-					</div>
-					
-
-
-					<input class="texto" id="nickname" autofocus="autofocus" />
-
-
-					<div class="conjunto_play">
-						<img draggable="false" src="./img/oazul.png" class="oazul_play">
-						<img draggable="false" src="./img/xrosa.png" class="xrosa_play">
-						<button class="boton_play" id="startBtn">									
-							PLAY!
-						</button>
-					</div>
-					
-
-
+	<head>
+		<!-- Título web junto a compatibilidad con navegador web       -->
+		<title>TicTacToe - Multiplayer Game</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Especificaciones y compatibilidades del HTML -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="language" content="english">
+		<meta name="copyright" content="tictactoe.io">
+		<meta name="audience" content="all">
+		<meta name="description" content="Play TicTacToe online with friends. Have fun competing in this classic two-player game!">
+		<meta name="keywords" content="TicTacToe, Online Game, Multiplayer">
+		<!-- Icono web, imagenes principales de los temas agregando una carga más rápida, conexión a otras fuentes de texto  -->
+		<link rel="shortcut icon" href="img/icono.png">
+		<link rel="preload" href="img/bgcyber.png" as="image">
+		<link rel="preload" href="img/playa.png" as="image">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- Hojas de estilo utilizadas tanto para interfaz como para fuentes de texto.(Archivos CSS) -->
+		<link rel="stylesheet" id="tema" href="css/style.css">  
+		<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/uranium">
+		<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ldr-manufacture">
+		<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/ghora-trial">
+		<link rel="stylesheet" href="https://fonts.cdnfonts.com/css/alpharope">
+		<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Barlow Condensed'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+	</head>
+	<body>
+		<!-- Interfaz principal para poder introducirte al juego -->
+		<div class="inicio" id="inicio">
+			<img draggable="false" src="img/TicTacToe_png.png" class="titulo_principal">
+			<div class="boton_iniciar" id="boton_iniciar">
+				<div class="interior">
+					<p>LET'S PLAY!!</p>
 				</div>
-
-			</div>
-			<div class="col-sm-6 col-sm-offset-3" id="gameBoard">
 			</div>
 		</div>
-	</div>
-
-	
-	
-	<div id="contenedor_emojis" class="contenedor_emojis">
-
-  		<button class="boton_emojis" id="boton_emojis"><img src="img/feliz.png" class="img_emoji_inicial"></button>
-
-  		<div class="panel_emojis" id="panel_emojis">
-
-			<button class="emojis" id="beso"><img src="img/beso.png" class="img_emoji"></button>
-			<button class="emojis" id="enojado"><img src="img/enojado.png" class="img_emoji"></button>
-			<button class="emojis" id="feliz"><img src="img/feliz.png" class="img_emoji"></button>
-			<button class="emojis" id="llorando"><img src="img/llorando.png" class="img_emoji"></button>
-			<button class="emojis" id="riendo"><img src="img/riendo.png" class="img_emoji"></button>
-			<button class="emojis" id="sonoliento"><img src="img/sonoliento.png" class="img_emoji"></button>
-
-
-  		</div>
-	</div>
-
-
-    <button id="botonaudio" class="botonaudio"><img src="img/sonido_off.png" id="imgsonido" alt="silencio"></button>
-	
-	<button id="botontema" class="botontema">
-		<img src="img/themes.png" class = "icotheme1" id="botonEstilo0"  draggable="false">
-		<img src="img/planetas.png" class = "icotheme" id="botonEstilo1" draggable="false">
-		<img src="img/cerebro.png" class = "icotheme" id="botonEstilo2" draggable="false">
-		<img src="img/isla.png" class = "icotheme" id="botonEstilo3" draggable="false">
-	</button>
-
-
-	<audio src="./audio/musica_fondo.mp3" id="audio" loop>  
-        Tu navegador no soporta el elemento<code>audio</code>.  
-    </audio>
-
-
-
-	<div class="div_crono" id="div_crono">
-		<p id="texto_crono">00:00:00</p>
-	</div>
-
-	
-	<div class = "div_reiniciar" id="div_reiniciar">
-		<button class="boton_reiniciar" id="boton_reiniciar">Restart The Game!!</button>
-		<h1 id="resultados" class="resultados"></h1>
-	</div>
-
-
-	<script src="js/Board.js"></script>
-	<script src="js/app.js"></script>
-	<script src="js/inicio.js"></script>
-
-</body>
+		<!-- Muestra los nombres de ambos jugadores, junto a el equipo que pertenece y el turno correspondiente -->
+		<div class="container">
+			<div class="row">
+				<div class="scoreBoard jugador1">
+					<h1>
+						<span id="p1Score"></span>
+					</h1>
+				</div>
+				<div class="scoreBoard jugador2">
+					<h1 class="text-right">
+						<span id="p2Score"></span>
+					</h1>
+				</div>
+			</div>
+			<!-- Pequeña decoración relacionada junto al inicio de nombre del jugador -->
+			<div class="row">
+				<div class="col-sm-6 col-sm-offset-3" id="joinForm">
+					<div class="general">
+						<div class="conjunto_titulo">
+							<img draggable="false" src="./img/xverde.png" class="xverde_titulo">
+							<img draggable="false" src="./img/onaranja.png" class="onaranja_titulo">
+							<h1 class="introduce_nombre">Enter your name</h1>
+						</div>
+						<input class="texto" id="nickname" autofocus="autofocus">
+						<div class="conjunto_play">
+							<img draggable="false" src="./img/oazul.png" class="oazul_play">
+							<img draggable="false" src="./img/xrosa.png" class="xrosa_play">
+							<button class="boton_play" id="startBtn">									
+								PLAY!
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-6 col-sm-offset-3" id="gameBoard"></div>
+			</div>
+		</div>
+		<!-- Panel de los emoticonos -->
+		<div id="contenedor_emojis" class="contenedor_emojis">
+			<button class="boton_emojis" id="boton_emojis">
+				<img src="img/feliz.png" class="img_emoji_inicial">
+			</button>
+			<div class="panel_emojis" id="panel_emojis">
+				<button class="emojis" id="beso"><img src="img/beso.png" class="img_emoji"></button>
+				<button class="emojis" id="enojado"><img src="img/enojado.png" class="img_emoji"></button>
+				<button class="emojis" id="feliz"><img src="img/feliz.png" class="img_emoji"></button>
+				<button class="emojis" id="llorando"><img src="img/llorando.png" class="img_emoji"></button>
+				<button class="emojis" id="riendo"><img src="img/riendo.png" class="img_emoji"></button>
+				<button class="emojis" id="sonoliento"><img src="img/sonoliento.png" class="img_emoji"></button>
+			</div>
+		</div>
+		<!-- Botones de música y temas -->
+		<button id="botonaudio" class="botonaudio"><img src="img/sonido_off.png" id="imgsonido" alt="silencio"></button>
+		<button id="botontema" class="botontema">
+			<img src="img/themes.png" class = "icotheme1" id="botonEstilo0"  draggable="false">
+			<img src="img/planetas.png" class = "icotheme" id="botonEstilo1" draggable="false">
+			<img src="img/cerebro.png" class = "icotheme" id="botonEstilo2" draggable="false">
+			<img src="img/isla.png" class = "icotheme" id="botonEstilo3" draggable="false">
+		</button>
+		<!-- Música del boton enlazada junto a un mensaje de error -->
+		<audio src="./audio/musica_fondo.mp3" id="audio" loop>  
+			Tu navegador no soporta el elemento<code>audio</code>.  
+		</audio>
+		<!-- Cronometro el cual aparece cuando empieza la partida entre dos jugadores -->
+		<div class="div_crono" id="div_crono">
+			<p id="texto_crono">00:00:00</p>
+		</div>
+		<!-- Panel final que aparece al terminal la partida para poder reiniciar -->
+		<div class = "div_reiniciar" id="div_reiniciar">
+			<button class="boton_reiniciar" id="boton_reiniciar">Restart The Game!!</button>
+			<h1 id="resultados" class="resultados"></h1>
+		</div>
+		<!-- Conexión de enlace a distintos archivos de JavaScript -->
+		<script src="js/Board.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/inicio.js"></script>
+	</body>
 </html>
-

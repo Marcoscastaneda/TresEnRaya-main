@@ -1,3 +1,4 @@
+/* Colores principales y posicionamiento del fondo */
 body {
     user-select: none;
     background: rgb(221, 252, 173);
@@ -8,9 +9,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-
 }
-
+/* Estilo del panel en el que introduces tu nombre de usuario */
 .container{
     position: absolute;
     width: 80%;
@@ -20,8 +20,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-
+/* Colores e interfaz del panel de juego junto a las fichas */
 ::selection {
     background: transparent;
 }
@@ -81,7 +80,7 @@ body {
     color: #516D66;
     height: 100px;
 }
-
+/* Tamaño y posición de los nombres d elos jugadores */
 .jugador1{
     position: absolute;
     left: 5%;
@@ -91,7 +90,7 @@ body {
     position: absolute;
     right: 5%;
 }
-
+/* Líneas que conforman el panel de juego */
 .boardCol {
     width: 5px;
     cursor: default !important;
@@ -105,9 +104,6 @@ body {
 .scoreBoard span.active {
     border-bottom: 4px solid #F286A0;
 }
-
-
-
 
 /*Pagina de inicio */
 
@@ -125,7 +121,7 @@ body {
     transition: 0.7s;
     opacity: 1;
 }
-
+/* Primer panel que aparece al inicar la aplicación */
 .titulo_principal{
     width: 50%;
     position: absolute;
@@ -133,7 +129,7 @@ body {
     position: absolute;
     top: -10%;
 }
-
+/* Boton para comenzar el juego */
 .boton_iniciar{
     position: absolute;
     width: 15%;
@@ -155,15 +151,14 @@ body {
     color: rgb(221, 252, 173);
 
 }
-
-
+/* Animación relacionada con el boton anterior */
 .boton_iniciar:hover{
     top: 57.5%;
     width: 20%;
     height: 20%;
     font-size: 3vw;
 }
-
+/* Estilo relacionado con el interior del botón */
 .interior{
     background-color: rgb(25, 130, 196);
     height: 92%;
@@ -174,7 +169,7 @@ body {
     align-items: center;
 }
 
-/* MUSICA */
+/* Boton relacionado con la música dle juego */
 
 .botonaudio{
     position: absolute;
@@ -190,11 +185,13 @@ body {
     box-shadow: 0 0 5px 1px rgb(117,199,251);
 }
 
+/* Animación relacionada con el boton anterior */
+
 .botonaudio:hover{
     box-shadow: 0 0 20px 1px rgb(117,199,251);
 }
 
-/* PAGINA INICIO */
+/* Div en el que se almacenan unas decoracione sjunto a un título e input de nombre de juego */
 
 .general{
     background-color: rgb(221, 252, 173);
@@ -207,8 +204,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-
+/* Título que solicita tu nombre */
 .conjunto_titulo{
     top: 5%;
     position: absolute;
@@ -219,7 +215,7 @@ body {
     justify-content: center;
     padding: 0;
 }
-
+/* Decoraciones de interfaz */
 .xverde_titulo{
     height: 35%;
     position: absolute;
@@ -228,6 +224,7 @@ body {
     rotate: 45deg;
     transition: 0.3s;
 }
+/* Aniaciones de las decoraciones de interfaz */
 .xverde_titulo:hover{
     rotate: 230deg;
 }
@@ -240,7 +237,7 @@ body {
       transform: rotate(360deg);
     }
   }
-
+/* Decoraciones de interfaz */
 .onaranja_titulo{
     top: 0%;
     right: 0%;
@@ -249,10 +246,11 @@ body {
     position: absolute;
     transition: 0.3s;
 }
+/* Animaciones de las decoraciones de interfaz */
 .onaranja_titulo:hover{
     rotate: 130deg;
 }
-
+/* Input en el cual introduces el nombre del jugador */
 .introduce_nombre{
     color: #000000;
     font-size: 3vw;
@@ -260,7 +258,7 @@ body {
     font-weight: bold;
     text-decoration: underline;
 }
-
+/* Formato del texto que aparece al introducir tu nombre de usuario */
 .texto{
     position: absolute;
     height: 50px;
@@ -279,7 +277,7 @@ body {
     transition: 0.3s;
     text-transform: uppercase;
 }
-
+/* Animaciones relacionadas con el fromato de texto anterior */
 .texto:hover{
     box-shadow: inset 0px 0px 8px 3px rgb(169, 216, 158);
 }
@@ -297,7 +295,7 @@ body {
     align-items: center;
     justify-content: center;
 }
-
+/* Botón con el que inicias el juego despues de introducir tu nombre */
 .boton_play{
     position: absolute;
     height: 40%;
@@ -315,6 +313,7 @@ body {
     box-shadow: 0px 0px 10px 5px rgb(136, 201, 131);
     transition: 0.3s;
 }
+/* Animacion relacionada con el boton anterior */
 .boton_play:hover{
     height: 45%;
     width: 25%;
@@ -322,14 +321,14 @@ body {
     box-shadow: 0px 0px 30px 50px white;
     animation: arcoiris 0.8s infinite;
 }
+
 @keyframes arcoiris {
     0% { box-shadow: 0px 0px 30px 10px rgba(117,199,251); }
   33.33% { box-shadow: 0px 0px 30px 10px rgba(255,102,196); }
   66.67% { box-shadow: 0px 0px 30px 10px rgb(250, 163, 33); }
   100% { box-shadow: 0px 0px 30px 10px rgba(117,199,251); }
 }
-
-
+/* Decoraciones de interfaz */
 .oazul_play{
     height: 35%;
     position: absolute;
@@ -338,9 +337,11 @@ body {
     rotate: 315deg;
     transition: 0.3s;
 }
+/* Animaciones de las decoraciones de interfaz */
 .oazul_play:hover{
     rotate: 130deg;
 }
+/* Decoraciones de interfaz */
 .xrosa_play{
     height: 35%;
     position: absolute;
@@ -349,11 +350,12 @@ body {
     rotate: 45deg;
     transition: 0.3s;
 }
+/* Animaciones de las decoraciones de interfaz */
 .xrosa_play:hover{
     rotate: 230deg;
 }
 
-/* BOTON EMOJIS */
+/* Desplegable que muestra los emoticonos disponibles */
 
 .boton_emojis{
     display: none;
@@ -371,14 +373,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* Emoji en el cual se activa el desplegable */
 .img_emoji_inicial{
     width: 80%;
     height: 80%;
     margin: 0px;
     padding: 0px;
 }
-
+/* Panel el cual conforma todos los emoticonos */
 .panel_emojis{
     display: none;
     opacity: 0;
@@ -394,7 +396,7 @@ body {
     transition: ease 0.5s;
     z-index: 999;
     }
-
+/* Tamaño y estructura de los botones de emoticonos */
 .emojis{
     margin: 10px;
     background: none;
@@ -405,8 +407,7 @@ body {
     height: 45px;
 }
 
-
-/* CRONOMETRO DE SESION */
+/* Cronometro el cual indica la duración de la partida que está transcurriendo */
 
 .div_crono{
     background-color: #f0f0f0;
@@ -459,8 +460,7 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
 }
-
-
+/* Texto el cual indica quien es el ganador al terminar la partida */
 .resultados{
     text-align: center;
     font-size: 3rem;
@@ -470,9 +470,7 @@ body {
     transform: translate(-50%, 0);
 }
 
-
-
-/* BOTON TEMAS */
+/* Boton el cual inicia el desplegable para seleccionar un tema */
 
 .botontema{
     display: none;
@@ -488,6 +486,7 @@ body {
     transition: ease 0.5s;
     box-shadow: 0 0 5px 1px rgb(117,199,251);
 }
+/* Iconos los en los cuales eliges tu tema favorito */
 .icotheme{
     display: none;
     opacity: 0;
